@@ -49,10 +49,15 @@ export default defineType({
       of: [
         {
           type: 'reference',
-          to: [{ type: 'size' }],
-          options: {
-            disableNew: true,
-          },
+          to: [
+            {
+              type: 'size',
+
+              options: {
+                disableNew: true,
+              },
+            },
+          ],
         },
       ],
     }),
@@ -64,10 +69,14 @@ export default defineType({
       of: [
         {
           type: 'reference',
-          to: [{ type: 'colour' }],
-          options: {
-            disableNew: true,
-          },
+          to: [
+            {
+              type: 'colour',
+              options: {
+                disableNew: true,
+              },
+            },
+          ],
         },
       ],
     }),
