@@ -80,4 +80,9 @@ export default defineType({
       ],
     }),
   ],
+  preview: {
+    select: {
+      media: "thumbnail"
+    }
+  }
 });
