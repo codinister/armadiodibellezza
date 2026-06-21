@@ -49,13 +49,12 @@ export default defineType({
       of: [
         {
           type: 'reference',
+          options: {
+            disableNew: true,
+          },
           to: [
             {
               type: 'size',
-
-              options: {
-                disableNew: true,
-              },
             },
           ],
         },
@@ -69,12 +68,12 @@ export default defineType({
       of: [
         {
           type: 'reference',
+          options: {
+            disableNew: true,
+          },
           to: [
             {
               type: 'colour',
-              options: {
-                disableNew: true,
-              },
             },
           ],
         },
