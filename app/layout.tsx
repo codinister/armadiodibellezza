@@ -1,8 +1,11 @@
 import QueriesProvider from '@/state/query/QueriesProvider';
 import './globals.css';
 import type { Metadata } from 'next';
-import { Roboto } from 'next/font/google';
+import { Roboto, Geist } from 'next/font/google';
 import StoreProvider from '@/state/redux/StoreProvider';
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -51,7 +54,7 @@ export default function RootLayout({
       lang="en"
       data-qb-installed="true"
       suppressHydrationWarning={true}
-      className={roboto.className}
+      className={cn(roboto.className, "font-sans", geist.variable)}
     >
       <body cz-shortcut-listen="true">
         <StoreProvider>
