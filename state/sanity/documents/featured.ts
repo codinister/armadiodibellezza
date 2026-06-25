@@ -7,8 +7,14 @@ export default defineType({
   fields: [
     defineField({
       name: 'featured_prod',
-      title: 'Product',
+      title: 'ADD PRODUCT DETAIL',
       type: 'product',
     }),
   ],
+  preview: {
+    select: {
+      media: 'featured_prod.thumbnail',
+      title: 'featured_prod.prod_name',
+    },
+  },
 });

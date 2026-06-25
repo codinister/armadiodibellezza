@@ -6,14 +6,8 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-    }),
-
-    defineField({
       name: 'clothe_prod',
-      title: 'Product',
+      title: 'ADD PRODUCT DETAIL',
       type: 'product',
     }),
 
@@ -21,6 +15,7 @@ export default defineType({
       name: 'clothecat',
       title: 'Category',
       type: 'reference',
+      validation: Rule => Rule.required().error('Category field required!'),
       to: [
         {
           type: 'clothe_cat',
@@ -31,4 +26,10 @@ export default defineType({
       ],
     }),
   ],
+  preview: {
+    select: {
+      media: 'clothe_prod.thumbnail',
+      title: 'clothe_prod.prod_name',
+    },
+  },
 });

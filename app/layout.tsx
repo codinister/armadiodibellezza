@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: 'CODENESTA',
     images: [
       {
-        url: '/logo.png', // will resolve with metadataBase
+        url: '', // will resolve with metadataBase
         width: 1200,
         height: 630,
         alt: 'Codenesta logo',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'CODENESTA',
     description: `I specialize in creating refined digital experiences and have strong expertise across multiple programming languages and technologies.`,
-    images: ['/logo.png'],
+    images: [''],
   },
 };
 
